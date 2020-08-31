@@ -1,0 +1,147 @@
+Title: Indigency "Flowchart"
+Author: Jonathan Costello
+Before: <link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">Indigency "Flowchart"</h2>
+<p><b>This is a <a href="https://www.codingthelaw.org/level/2/#mission_p1">class project</a>. You should not rely on it as a source of legal information!</b></p>
+<p>Answer the following questions to see if you qualify for appointed counsel in Michigan.</p>
+Q(state):Have you been accused of a crime in the state of Michigan?
+A:Yes 
+	Q(1.1):GOTO:Lawyer
+A:No 
+	Q(1.2):GOTO:ineligible
+
+Q(Lawyer):Do you need a lawyer?
+A:Yes 
+	Q(2.1):GOTO:explanation
+A:No 
+	Q(2.2):GOTO:ineligible
+
+Q(explanation):Okay! To determine your eligibility for a public defender, I will need to ask some questions about your living arrangements and income. The availability of public defenders is dependant on need, therefore we will need to do some calculations on your household income to determine if you are within the permitted percentage of the poverty line. Do you wish to proceed?
+A:Yes 
+	Q(3.1):GOTO:livingalone 
+A:No 
+	Q(3.2):GOTO:ineligible
+
+
+Q(livingalone): Do you currently live alone? 
+A:Yes 
+	Q(4.1):GOTO:soloincome
+A:No 
+	Q(4.2):GOTO:living1
+
+Q(soloincome): Do you less than $17,864 per year? 
+A:Yes 
+	Q(5.1):GOTO:eligible
+A:No 
+	Q(5.2):GOTO:ineligible
+
+
+Q(living1): Do you currently live with one other person? 
+A:Yes 
+	Q(6.1):GOTO:income1
+A:No 
+	Q(6.2):GOTO:living2
+
+Q(income1): Does your hosuehold make less than $24,136 per year? 
+A:Yes 
+	Q(7.1):GOTO:eligible
+A:No 
+	Q(7.2):GOTO:ineligible
+
+
+Q(living2): Do you currently live with two other people? 
+A:Yes 
+	Q(8.1):GOTO:income2
+A:No 
+	Q(8.2):GOTO:living3 
+
+Q(income2): Does your hosuehold make less than $36,608 per year? 
+A:Yes 
+	Q(9.1):GOTO:eligible
+A:No 
+	Q(9.2):GOTO:ineligible
+
+Q(living3): Do you currently live with three other people? 
+A:Yes 
+	Q(10.1):GOTO:income3
+A:No 
+	Q(10.2):GOTO:living4 
+
+Q(income3): Does your hosuehold make less than $36,368 per year? 
+A:Yes 
+	Q(11.1):GOTO:eligible
+A:No 
+	Q(11.2):GOTO:ineligible
+Q(living4): Do you currently live with four other people? 
+A:Yes 
+	Q(12.1):GOTO:income4
+A:No 
+	Q(12.2):GOTO:living5 
+
+Q(income4): Does your hosuehold make less than $42,952 per year? 
+A:Yes 
+	Q(13.1):GOTO:eligible
+A:No 
+	Q(13.2):GOTO:ineligible
+
+Q(living5): Do you currently live with five other people? 
+A:Yes 
+	Q(14.1):GOTO:income5
+A:No 
+	Q(14.2):GOTO:living6 
+
+Q(income5): Does your hosuehold make less than $49,244 per year? 
+A:Yes 
+	Q(15.1):GOTO:eligible
+A:No 
+	Q(15.2):GOTO:ineligible
+
+Q(living6): Do you currently live with six other people? 
+A:Yes 
+	Q(16.1):GOTO:income6
+A:No 
+	Q(16.2):GOTO:living7 
+
+Q(income6): Does your hosuehold make less than $55,496 per year? 
+A:Yes 
+	Q(17.1):GOTO:eligible
+A:No 
+	Q(17.2):GOTO:ineligible
+
+Q(living7): Do you currently live with seven other people? 
+A:Yes 
+	Q(18.1):GOTO:income7
+A:No 
+	Q(18.2):GOTO:living8 
+
+Q(income7): Does your hosuehold make less than $61,769 per year? 
+A:Yes 
+	Q(19.1):GOTO:eligible
+A:No 
+	Q(19.2):GOTO:ineligible
+
+Q(living8): Do you currently live with eight other people? 
+A:Yes 
+	Q(20.1):GOTO:income8
+A:No 
+	Q(20.2):GOTO:living9
+
+Q(income8): Does your hosuehold make less than $ 68,040 per year? 
+A:Yes 
+	Q(21.1):GOTO:eligible
+A:No 
+	Q(21.2):GOTO:ineligible
+
+Q(living9): Do you currently live with more than eight other people? 
+A:Yes 
+	Q(22.1):GOTO:maybe
+A:No 
+	Q(22.2):GOTO:unknown 
+
+Q(unknown): You likely will need to speak with someone in person to determine your eligibility. 
+
+
+Q(ineligible): you are ineligible. 
+Q(maybe): You may be eligible. 
+Q(eligible): You are eligible. 
